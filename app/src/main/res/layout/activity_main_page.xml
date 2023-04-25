@@ -21,13 +21,18 @@
     <EditText
         android:id="@+id/inputSearch"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/search_icon"
+        android:drawablePadding="24dp"
         android:hint="Search here..."
         android:inputType="textPersonName"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/inputSearch" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ScrollView
         android:id="@+id/scrollViewMain"
@@ -35,9 +40,11 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/add_book"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputSearch"
-        >
+        app:layout_constraintVertical_bias="0.0"
+         >
 
         <LinearLayout
             android:id="@+id/mainLayout"
