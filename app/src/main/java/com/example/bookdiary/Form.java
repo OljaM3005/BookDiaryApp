@@ -29,15 +29,15 @@ public class Form extends AppCompatActivity {
         save = findViewById(R.id.save_btn);
         quit = findViewById(R.id.give_up);
 
-        books = (ArrayList<My_book>) getIntent().getSerializableExtra("title");
+      /*  books = (ArrayList<My_book>) getIntent().getSerializableExtra("title");
         indeks = getIntent().getIntExtra("indeks", -1);
         if (indeks == -1) {
             addBook();
         } else {
             editBook();
-        }
+        }*/
     }
-    public void addBook() {
+   /* public void addBook() {
         //dupliranje koda
         title = findViewById(R.id.bookTitleId);
         author = findViewById(R.id.bookAuthorId);
@@ -100,7 +100,7 @@ public class Form extends AppCompatActivity {
             }
         });
 
-    }
+    }*/
 
 
 }
