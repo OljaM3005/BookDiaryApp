@@ -2,10 +2,12 @@ package com.example.bookdiary;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -32,6 +34,10 @@ public class MainPage extends AppCompatActivity {
     RecyclerView recyclerView;
     FloatingActionButton add_btn;
 
+    MyDatabaseHelper my_db;
+    ArrayList<String> book_id, book_title, book_author, book_pages;
+    CustomAdapter customAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +55,30 @@ public class MainPage extends AppCompatActivity {
             }
         });
 
+        my_db = new MyDatabaseHelper(MainPage.this);
+        book_id = new ArrayList<>();
+        book_title = new ArrayList<>();
+        book_author = new ArrayList<>();
+        book_pages = new ArrayList<>();
 
+        storeDataInArrays();
+        customAdapter = new CustomAdapter(MainPage.this, book_id, book_title, book_author, book_pages);
+        recyclerView.setAdapter(customAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainPage.this));
+
+    }
+
+    void storeDataInArrays(){
+        Cursor cursor = my_db.readAllData();
+        if(cursor.getCount() == 0){
+            Toast.makeText(this, "No data", Toast.LENGTH_SHORT).show();
+        }else{
+            while (cursor.moveToNext()){
+                book_id.add(cursor.getString(0));
+                book_title.add(cursor.getString(1));
+                book_author.add(cursor.getString(2));
+                book_pages.add(cursor.getString(3));
+            }
+        }
     }
 }
