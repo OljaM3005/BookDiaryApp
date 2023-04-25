@@ -6,6 +6,10 @@ public class My_book implements Serializable {
         private String title;
         private String author;
 
+    public My_book() {
+
+    }
+
     public String getTitle() {
             return title;
         }
