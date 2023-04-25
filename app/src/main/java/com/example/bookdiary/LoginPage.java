@@ -46,7 +46,6 @@ public class LoginPage extends AppCompatActivity {
         });
 
 
-
         LayoutInflater inflater = LayoutInflater.from(this);
         ConstraintLayout sublayout = (ConstraintLayout) inflater.inflate(R.layout.quit_btn, null);
         ConstraintLayout loginLayout = (ConstraintLayout) findViewById(R.id.loginlayout);
