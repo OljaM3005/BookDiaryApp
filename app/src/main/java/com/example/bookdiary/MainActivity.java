@@ -12,6 +12,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,11 +24,11 @@ public class MainActivity extends AppCompatActivity {
     Button letsStartBtn;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
 
         letsStartBtn = findViewById(R.id.letsStartBtn);
 
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
         LayoutInflater inflater = LayoutInflater.from(this);
-        //LayoutInflater inflater2 = getLayoutInflater();
         ConstraintLayout sublayout = (ConstraintLayout) inflater.inflate(R.layout.quit_btn, null);
         ConstraintLayout mainlayout = (ConstraintLayout) findViewById(R.id.mainlayout);
         mainlayout.addView(sublayout);
@@ -55,5 +56,14 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+
     }
+
+
+
+
+
+
+
 }
