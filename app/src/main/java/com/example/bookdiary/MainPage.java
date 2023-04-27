@@ -108,7 +108,6 @@ public class MainPage extends AppCompatActivity {
         }
     }
 
-    //Prvobitno generisanje sadrzaja, ima dosta dupliranja koda
     private void generateData(){
         LayoutInflater inflater = LayoutInflater.from(this);
         mainLayout = findViewById(R.id.mainLayout);
@@ -122,8 +121,8 @@ public class MainPage extends AppCompatActivity {
             subLayout = (LinearLayout) inflater.inflate(R.layout.my_book,
                     mainLayout, false);
             children.add(subLayout);
-            //podesavamo podatke za svaki kontakt
 
+            //podesavamo podatke za svaki kontakt
             title = subLayout.findViewById(R.id.naslov);
             author = subLayout.findViewById(R.id.autor);
             delBtn = subLayout.findViewById(R.id.del_btn);
