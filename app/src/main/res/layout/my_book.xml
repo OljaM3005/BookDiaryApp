@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_book"
+    android:background="@drawable/custom_input"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:paddingBottom="20dp">
+
+    <LinearLayout
+        android:id="@+id/book_info_id"
+        android:layout_width="300dp"
+        android:layout_height="120dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/naslov"
+            android:layout_width="220dp"
+            android:textStyle="bold|italic"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Book"
+            android:textColor="#150729"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/autor"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:text="Author"
+            android:textColor="#150729"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/del_btn"
+        android:text="Del"
+        android:padding="0dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:textColor="#150729"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp" />
+
+
+</LinearLayout>

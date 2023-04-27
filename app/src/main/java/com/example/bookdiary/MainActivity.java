@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         letsStartBtn = findViewById(R.id.letsStartBtn);
+
         letsStartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
 
         LayoutInflater inflater = LayoutInflater.from(this);
         ConstraintLayout sublayout = (ConstraintLayout) inflater.inflate(R.layout.quit_btn, null);
@@ -53,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
+
+
+
+
+
 
 }
