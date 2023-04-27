@@ -18,7 +18,7 @@ public class Form extends AppCompatActivity {
     Button save, quit;
     int indeks;
     My_book b;
-    ArrayList<My_book> books = new ArrayList<My_book>();
+    ArrayList<My_book> books;
 
     EditText title, author;
     Intent i;
@@ -31,7 +31,7 @@ public class Form extends AppCompatActivity {
         save = findViewById(R.id.save_btn);
         quit = findViewById(R.id.give_up);
 
-        books = (ArrayList<My_book>) getIntent().getSerializableExtra("title");
+        books = (ArrayList<My_book>) getIntent().getSerializableExtra("books");
         indeks = getIntent().getIntExtra("indeks", -1);
         if (indeks == -1) {
             addBook();
@@ -63,7 +63,7 @@ public class Form extends AppCompatActivity {
             public void onClick(View v) {
                 b.setTitle(title.getText().toString());
                 b.setAuthor(author.getText().toString());
-                ArrayList<My_book>books = new ArrayList<My_book>();
+                ArrayList<My_book>books = new ArrayList<>();
                 books.add(b);
                 Toast.makeText(Form.this, "ubaceno", Toast.LENGTH_SHORT).show();
                 i.putExtra("books", books);
@@ -105,6 +105,5 @@ public class Form extends AppCompatActivity {
         });
 
     }
-
 
 }

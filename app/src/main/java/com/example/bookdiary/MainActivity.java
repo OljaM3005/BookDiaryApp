@@ -42,8 +42,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
-
         LayoutInflater inflater = LayoutInflater.from(this);
         ConstraintLayout sublayout = (ConstraintLayout) inflater.inflate(R.layout.quit_btn, null);
         ConstraintLayout mainlayout = (ConstraintLayout) findViewById(R.id.mainlayout);

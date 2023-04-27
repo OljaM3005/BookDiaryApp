@@ -1,11 +1,9 @@
 package com.example.bookdiary;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -13,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -24,7 +21,7 @@ public class MainPage extends AppCompatActivity {
     Context c;
     LinearLayout mainLayout;
     LinearLayout subLayout;
-    ArrayList<My_book> books = new ArrayList<My_book>();
+    ArrayList<My_book> books;
     ArrayList<My_book> shownBook;
     Button add_book;
     EditText search;
@@ -39,7 +36,7 @@ public class MainPage extends AppCompatActivity {
 
         c = this;
         children = new ArrayList<>();
-        books = (ArrayList<My_book>)getIntent().getSerializableExtra("title");
+        books = (ArrayList<My_book>)getIntent().getSerializableExtra("books");
         if(books == null)
             setupData();
         generateData();
